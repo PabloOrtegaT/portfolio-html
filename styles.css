@@ -4,6 +4,9 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
+h1{
+  padding-right: 2.5rem;
+}
 
 p, a {
   font-family: 'Source Sans Pro', sans-serif;
@@ -163,9 +166,9 @@ footer {
     --marquee-width: 100%;
     --marquee-height: 8rem;
     /* --marquee-elements: 12; */ /* defined with JavaScript */
-    --marquee-elements-displayed: 6;
+    --marquee-elements-displayed: 5;
     --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
-    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+    --marquee-animation-duration: calc(var(--marquee-elements) * 4s);
   }
   
   .marquee {
@@ -222,11 +225,17 @@ footer {
     border: 2px solid #eee;
   }
   
-  @media (max-width: 791px) {
-    html { font-size: 12px; }
+  @media (max-width: 793.5px) {
+    .marquee-content li { font-size:  5rem;  }
     :root {
       --marquee-height: 7.5rem;
-      --marquee-elements-displayed: 4;
+      --marquee-elements-displayed: 3;
     }
     .marquee:before, .marquee:after { width: 5rem; }
+  }
+  
+  @media (min-width: 793.5px) and (max-width: 1126.97px) {
+    :root {
+      --marquee-elements-displayed: 4;
+    }
   }
