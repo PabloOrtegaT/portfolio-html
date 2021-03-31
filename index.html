@@ -1,29 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Portfolio Example</title>
-        <link type="text/css" href="styles.css" rel="stylesheet">
-    </head>
-    <body>
-        <div style="background-image: linear-gradient(#006572, #00cab9); font-size: 2em; text-align: center;">
-            <p style="text-align: end; color: white">contact about resume work community</p>
-            <p style="text-align: center;">Pablo Ortega</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+  <head>
+    <title>Pablo Ortega</title>
+    <link type="text/css" href="styles.css" rel="stylesheet">
+    <script src="js/all.min.js"></script>
+  </head>
 
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-        <p style="background-color: #00cab9; font-size: 2em;">First project goes here</p>
-        <p class="topic">Explanation of the project</p>
-        <img src="https://picsum.photos/seed/picsum/200/300"  alt="This is the project"/>
+  <body>   
+      <div class="navigation">
+        <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
 
-        <p style="background-color: #00cab9; font-size: 2em;">Second project goes here</p>
-        <p class="topic">Explanation of the project</p>
-        <img src="https://picsum.photos/200/300?grayscale"  alt="This is the project"/>
+        <main class="wrapper">
+            <section class="hero">
+              <h1>Pablo Ortega</h1>
+              <article>
+                <p>Hello there. I'm a software engineer.</p>
+                <a href="#projects">Browse Projects</a>
+              </article>
+            </section>
 
+            <div class="marquee">
+              <ul class="marquee-content">
+                <li><i class="fab fa-github"></i></li>
+                <li><i class="fab fa-react"></i></li>
+                <li><i class="fab fa-vuejs"></i></li>
+                <li><i class="fab fa-node"></i></li>
+                <li><i class="fab fa-aws"></i></li>
+                <li><i class="fab fa-docker"></i></li>
+                <li><i class="fab fa-android"></i></li>
+              </ul>
+          </div>
 
-        <script type="text/javascript">
-            console.log("Hola!");
-        </script>
-        <script type="text/javascript" src="manipulation.js"></script>
+            <section class="projects" id="projects">
+              <ul>
+                <li>
+                  <figure>
+                    <!-- Photo by Quentin Dr on Unsplash -->
+                    <img src="https://images.unsplash.com/photo-1471421298428-1513ab720a8e" alt="Several hands holding beer glasses">
+                    <figcaption>
+                      <h3>Billions upon billions</h3>
+                    </figcaption>
+                  </figure>
+                  
+                  <p>
+                    My first project
+                  </p>
+                  <a href="#">Read more</a>
+                </li>
+                <li>
+                  <figure>
+                    <!-- Photo by Drew Farwell on Unsplash -->
+                    <img src="https://images.unsplash.com/photo-1513309914637-65c20a5962e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80" alt="Several friends doing a toast">
+                    <figcaption>
+                      <h3>Drake Equation</h3>
+                    </figcaption>
+                  </figure>
+                  <p>
+                    My second project
+                  </p>
+                  <a href="#">Read more</a>
+                </li>
+                <li>
+                  <figure>
+                    <!-- Photo by Rawpixel on Unsplash -->
+                    <img src="https://images.unsplash.com/photo-1535359056830-d4badde79747?ixlib=rb-1.2.1&auto=format&fit=crop&w=3402&q=80" alt="Three different glasses of beer">
+                    <figcaption>
+                      <h3>Vast cosmic arena</h3>
+                    </figcaption>
+                  </figure>
+                  <p>
+                    My third project
+                  </p>
+                  <a href="#">Read more</a>
+                </li>
+              </ul>
+            </section>
+          </main>
+          <footer>
+            <p>&copy; Pablo Ortega. Made with ❤.</p>
+          </footer>
+          <script src="app.js"></script>
     </body>
 </html>
