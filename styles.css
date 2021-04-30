@@ -4,6 +4,7 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
+
 h1{
   padding-right: 2.5rem;
 }
@@ -11,14 +12,6 @@ h1{
 p, a {
   font-family: 'Source Sans Pro', sans-serif;
 }
-/*
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  } */
-
-/* Generic styles */
 
 .projects a {
   background-color: rgb(26, 93, 218);
@@ -30,7 +23,7 @@ p, a {
   transition: all .3s;
 }
 
-a:hover {
+.projects a:hover {
   opacity: .6;
 }
 
@@ -136,6 +129,7 @@ footer {
     overflow: hidden;
     background-color: #333;
     position: fixed;
+    z-index: 1000;
     top: 0;
     width: 100%;
   }
@@ -201,9 +195,9 @@ footer {
     display: flex;
     animation: scrolling var(--marquee-animation-duration) linear infinite;
   }
-  /* .marquee-content:hover {
+  .marquee-content:hover {
     animation-play-state: paused;
-  } */
+  } 
   @keyframes scrolling {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
@@ -221,9 +215,115 @@ footer {
   
   .marquee-content li img {
     width: 100%;
-    /* height: 100%; */
+    height: 100%; 
     border: 2px solid #eee;
   }
+
+
+/* common styles !!! YOU DON'T NEED THEM */
+.container {
+  margin: 20px auto 0px auto;
+  text-align: center;
+}
+.container h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #333;
+  letter-spacing: 3px;
+}
+.container h1 span {
+  display: inline-block;
+}
+.container h1 span:before, .container h1 span:after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 2px;
+  background-color: #333;
+  margin: 0px 0px 0px 2px;
+}
+
+.effect {
+  width: 100%;
+  padding: 20px 0px 70px 0px;
+  background-color: #333;
+}
+.effect h2 {
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+.effect:nth-child(2) {
+  margin-top: 50px;
+}
+.effect:nth-child(2n+1) {
+  background-color: #fff;
+}
+.effect:nth-child(2n+1) h2 {
+  color: #333;
+}
+.effect:nth-child(2n) a {
+  color: #fff;
+  border-color: #fff;
+}
+.effect .buttons {
+  display: flex;
+  justify-content: center;
+}
+
+/* styles for a common effect !!!YOU NEED THEM */
+.effect {
+  /*display: flex; !!!uncomment this line !!!*/
+}
+.effect a {
+  text-decoration: none !important;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  font-size: 25px;
+  overflow: hidden;
+  position: relative;
+  color: #333;
+  border: 2px solid #333;
+}
+.effect a i {
+  position: relative;
+  z-index: 3;
+}
+.effect a:last-child {
+  margin-right: 0px;
+}
+.effect a:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.effect a i {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* thurio effect */
+.effect.thurio a {
+  transition: border-radius 0.2s linear 0s;
+}
+.effect.thurio a i {
+  transition: transform 0.01s linear 0s;
+  transform: rotate(-45deg);
+}
+.effect.thurio a:hover {
+  border-radius: 0px;
+}
+
   
   @media (max-width: 793.5px) {
     .marquee-content li { font-size:  5rem;  }
