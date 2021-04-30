@@ -222,7 +222,7 @@ footer {
 
 /* common styles !!! YOU DON'T NEED THEM */
 .container {
-  margin: 20px auto 0px auto;
+  margin: 10px auto 0px auto;
   text-align: center;
 }
 .container h1 {
@@ -247,29 +247,14 @@ footer {
 
 .effect {
   width: 100%;
-  padding: 20px 0px 70px 0px;
+  padding: 0px 0px 25px 0px;
   background-color: #333;
 }
-.effect h2 {
-  color: #fff;
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-  font-size: 25px;
-  letter-spacing: 3px;
-}
-.effect:nth-child(2) {
-  margin-top: 50px;
-}
+
 .effect:nth-child(2n+1) {
   background-color: #fff;
 }
-.effect:nth-child(2n+1) h2 {
-  color: #333;
-}
-.effect:nth-child(2n) a {
-  color: #fff;
-  border-color: #fff;
-}
+
 .effect .buttons {
   display: flex;
   justify-content: center;
