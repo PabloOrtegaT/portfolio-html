@@ -29,7 +29,7 @@ p, a {
 
 /* Styles for the hero image */
 .hero {
-  background: url('https://images.unsplash.com/photo-1518176258769-f227c798150e') center;
+  background-image: url('../../images/image.png');
   background-size: cover;
   padding: 4rem 2rem;
   /* grid styles */
@@ -39,18 +39,32 @@ p, a {
   height: 390px;
 }
 
-.hero > * {
-  color: white;
-}
-
-.hero > h1 {
-  font-size: 4rem;
-  padding-bottom: 1rem;
-}
 
 .hero > article > p {
   font-size: 1.5rem;
   font-weight: 200;
+}
+
+.presentation-banner {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  width: 100%;
+}
+.presentation-banner h1 {
+  color: white;
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.presentation-banner h3 {
+  color: white;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+#particles-js {
+  background:rgb(51, 51, 51);
+  height: 95vh;
 }
 
 /* projects styles */
@@ -148,78 +162,124 @@ footer {
     background-color: #111;
   }
   
-/*.active {
-    background-color: #4CAF50;
-  }*/
-
+  /**************/
   /* Skills Bar */ 
+  /**************/
 
-  :root {
-    --marquee-width: 100%;
-    --marquee-height: 8rem;
-    /* --marquee-elements: 12; */ /* defined with JavaScript */
-    --marquee-elements-displayed: 5;
-    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
-    --marquee-animation-duration: calc(var(--marquee-elements) * 4s);
-  }
-  
-  .marquee {
-    width: var(--marquee-width);
-    height: var(--marquee-height);
-    background-color:#333;
-    color: #eee;
-    overflow: hidden;
-    position: relative;
-  }
-  .marquee:before, .marquee:after {
-    position: absolute;
-    top: 0;
-    width: 10rem;
-    height: 100%;
-    content: "";
-    z-index: 1;
-  }
-  
-  .marquee:before {
-    left: 0;
-    background: linear-gradient(to right, #333 0%, transparent 100%);
-  }
-  .marquee:after {
-    right: 0;
-    background: linear-gradient(to left, #333 0%, transparent 100%);
-  }
-  .marquee-content {
-    list-style: none;
-    height: 100%;
-    display: flex;
-    animation: scrolling var(--marquee-animation-duration) linear infinite;
-  }
+:root {
+  --marquee-width: 100%; /* For skill bar */
+  --marquee-height: 13vh; /* For skill bar */
+}
 
-  .marquee-content.active {
-    animation-play-state: paused;
-  }
+/* Gallery */
+.gallery{
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-100%);
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  background-color: rgb(51,51,51, 0.2);
+}
 
-  @keyframes scrolling {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
-  }
-  
-  .marquee-content li {
-    display: flex;
-    justify-content: center;
-    text-align: center; 
-    flex-shrink: 0;
-    width: var(--marquee-element-width);
-    max-height: 100%;
-    font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
+.gallery:before,
+.gallery:after {
+  position: absolute;
+  top: 0;
+  width: 35rem;
+  height: 100%;
+  content: "";
+  z-index: 3;
+}
 
-  }
-  
-  .marquee-content li img {
-    width: 100%;
-    height: 100%; 
-    border: 2px solid #eee;
-  }
+.gallery:before {
+  left: 0;
+  background:  linear-gradient(to right, rgba(51,51,51,1) 0%, rgba(51,51,51, 0) 100%);
+}
+
+.gallery:after {
+  right: 0;
+  background:  linear-gradient(to left, rgba(51,51,51,1) 0%, rgba(51,51,51,0) 100%);
+}
+
+.gallery__stream {
+  transform: translateY(-50%);
+  /*width: 100%;
+  display: flex;
+  */
+  height: 30%;
+}
+
+.gallery__stream .slider {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 100%;
+  align-items:center;
+  flex-shrink: 0;
+  width: 100vw;
+  transition: 0.4s all ease;
+  border-radius: 5px;
+  color: #fff;
+  font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
+  white-space: nowrap;
+}
+
+.gallery__stream .slider:nth-child(1) {
+  left: 0;
+  z-index: 1;
+  transform: translateX(-100%) scale(.8);
+}
+
+.gallery__stream .slider:nth-child(2) {
+  left: 20%;
+  z-index: 2;
+  transform: translateX(-50%) scale(.8);
+}
+
+.gallery__stream .slider:nth-child(3) {
+  left: 40%;
+  z-index: 2;
+  transform: translateX(-50%) scale(.8);
+}
+
+.gallery__stream .slider:nth-child(4) {
+  left: 60%;
+  z-index: 2;
+  transform: translateX(-50%) scale(.8);
+}
+
+.gallery__stream .slider:nth-child(5) {
+  left: 80%;
+  z-index: 2;
+  transform: translateX(-50%) scale(.8);
+}
+
+.gallery__stream .slider:nth-child(n+6) {
+  left: 100%;
+  z-index: 1;
+  transform: scale(.8);
+}
+
+/* Controllers for skills */
+
+.gallery__prev,
+.gallery__next {
+  position: absolute;
+  top: 0%;
+  z-index: 4;
+  width: 60%;
+  height: 250%;
+  transform: translateX(-50%) translateY(-50%) scale(.8);
+  cursor: pointer;
+}
+
+.gallery__prev {
+  left: 0;
+}
+
+.gallery__next {
+  left: 100%;
+}
 
 
 /* common styles !!! YOU DON'T NEED THEM */
@@ -319,10 +379,20 @@ footer {
       --marquee-elements-displayed: 3;
     }
     .marquee:before, .marquee:after { width: 5rem; }
+    .gallery:before,
+    .gallery:after {
+      width: 15rem;
+    }
   }
   
   @media (min-width: 793.5px) and (max-width: 1126.97px) {
     :root {
       --marquee-elements-displayed: 4;
     }
-  }
+    .marquee:before, .marquee:after { width: 5rem; }
+    .gallery:before,
+    .gallery:after {
+      width: 25rem;
+    }
+  } 
+
