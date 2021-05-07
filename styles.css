@@ -43,24 +43,35 @@ p, a {
 .hero > article > p {
   font-size: 1.5rem;
   font-weight: 200;
+  display: grid;
+  
 }
 
 .presentation-banner {
-  position: absolute;
-  text-align: center;
-  top: 30%;
-  width: 100%;
+  font-family: 'Source Sans Pro';
+    font-size: 1.3em;
+    position: absolute;
+    z-index: 10;
+    width: 400px;
+    height: 220px;
+    top: 20%;
+    left: 20%;
+    margin: -110px 0 0 -100px;
+    padding: 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
+
 .presentation-banner h1 {
   color: white;
   font-size: 4rem;
-  padding-bottom: 1rem;
 }
 
 .presentation-banner h3 {
   color: white;
-  font-size: 1.2rem;
-  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 200;
+  display: grid;
 }
 #particles-js {
   background:rgb(51, 51, 51);
@@ -373,15 +384,16 @@ footer {
 
   
   @media (max-width: 793.5px) {
-    .marquee-content li { font-size:  5rem;  }
     :root {
       --marquee-height: 7.5rem;
       --marquee-elements-displayed: 3;
     }
-    .marquee:before, .marquee:after { width: 5rem; }
     .gallery:before,
     .gallery:after {
       width: 15rem;
+    }
+    .gallery__stream .slider {
+      font-size: calc(var(--marquee-height)*1.8/4); /* 5rem; */
     }
   }
   
@@ -389,10 +401,12 @@ footer {
     :root {
       --marquee-elements-displayed: 4;
     }
-    .marquee:before, .marquee:after { width: 5rem; }
     .gallery:before,
     .gallery:after {
       width: 25rem;
+    }
+    .gallery__stream .slider {
+      font-size: calc(var(--marquee-height)*2.4/4); /* 5rem; */
     }
   } 
 

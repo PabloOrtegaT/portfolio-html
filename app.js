@@ -1,41 +1,41 @@
 const interval = 2500;
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   var stream = document.querySelector('.gallery__stream');
-//   var items = document.querySelectorAll('.slider');
-//   var prev = document.querySelector('.gallery__prev');
+document.addEventListener('DOMContentLoaded', function() {
+  var stream = document.querySelector('.gallery__stream');
+  var items = document.querySelectorAll('.slider');
+  var prev = document.querySelector('.gallery__prev');
   
-//   prev.addEventListener('click', function() {
-//     clearInterval(slideId);
-//     items = document.querySelectorAll('.slider');
-//     stream.insertBefore(items[items.length - 1], items[0]);
-//     startSlide();
-//   });
+  prev.addEventListener('click', function() {
+    clearInterval(slideId);
+    items = document.querySelectorAll('.slider');
+    stream.insertBefore(items[items.length - 1], items[0]);
+    startSlide();
+  });
   
-//   var next = document.querySelector('.gallery__next');
-//   next.addEventListener('click', function() {
-//     items = document.querySelectorAll('.slider');
-//     stream.appendChild(items[0]);
-//     clearInterval(slideId);
-//     startSlide();
-//   });
+  var next = document.querySelector('.gallery__next');
+  next.addEventListener('click', function() {
+    items = document.querySelectorAll('.slider');
+    stream.appendChild(items[0]);
+    clearInterval(slideId);
+    startSlide();
+  });
 
-//   const startSlide = () => {
-//     slideId = setInterval(() => {
-//       items = document.querySelectorAll('.slider');
-//       stream.appendChild(items[0]);
-//     }, interval);
-//   };
+  const startSlide = () => {
+    slideId = setInterval(() => {
+      items = document.querySelectorAll('.slider');
+      stream.appendChild(items[0]);
+    }, interval);
+  };
 
-//   stream.addEventListener('mouseenter', () => {
-//     clearInterval(slideId)
-//   });
+  stream.addEventListener('mouseenter', () => {
+    clearInterval(slideId)
+  });
 
-//   stream.addEventListener('mouseleave', startSlide);
+  stream.addEventListener('mouseleave', startSlide);
 
-//   startSlide();
+  startSlide();
 
-// });
+});
 
 /*let isDown = false;
 let startX;
