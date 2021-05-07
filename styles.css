@@ -5,29 +5,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
 
-h1{
-  padding-right: 2.5rem;
-}
-
 p, a {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.projects a {
-  background-color: rgb(51, 51, 51, 0.9);
-  text-decoration: none;
-  color: white;
-  border-radius: .25rem;
-  text-align: center;
-  display: inline-block;
-  transition: all .3s;
-}
+/****************/
+/* Presentation */
+/****************/
 
-.projects a:hover {
-  opacity: .6;
-}
-
-/* Styles for the hero image */
 .hero {
   background-image: url('../../images/image.png');
   background-size: cover;
@@ -39,7 +24,6 @@ p, a {
   height: 390px;
 }
 
-
 .hero > article > p {
   font-size: 1.5rem;
   font-weight: 200;
@@ -49,45 +33,53 @@ p, a {
 
 .presentation-banner {
   font-family: 'Source Sans Pro';
-    font-size: 1.3em;
     position: absolute;
     z-index: 10;
-    width: 400px;
+    width: 350px;
     height: 220px;
-    top: 20%;
+    top: 40%;
     left: 20%;
     margin: -110px 0 0 -100px;
-    padding: 20px;
-    border-radius: 4px;
     box-sizing: border-box;
 }
 
 .presentation-banner h1 {
   color: white;
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .presentation-banner h3 {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 200;
   display: grid;
 }
 #particles-js {
   background:rgb(51, 51, 51);
   height: 95vh;
+  width: 100%;
 }
 
-/* projects styles */
-.projects {
-  padding: 2rem;
+/************/
+/* Projects */
+/************/
+
+.projects a {
+  background-color: rgb(51, 51, 51, 0.9);
+  text-decoration: none;
+  color: white;
+  border-radius: .25rem;
+  text-align: center;
+  display: inline-block;
+  transition: all .3s;
 }
 
 .projects ul {
   display: grid;
   list-style:none;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 1rem;
+  margin: -30px 0 0 -40px;
 }
 
 .projects ul li {
@@ -132,7 +124,10 @@ p, a {
   margin: .5rem;
 }
 
+/**********/
 /* footer */
+/**********/
+
 footer {
   background-color: #333;
   padding: .75rem;
@@ -141,20 +136,28 @@ footer {
   font-size: .75rem;
 }
 
+/******************/
 /* Navigation Bar */ 
+/******************/
 .navigation ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    padding-right: 150;
+    padding-left: 2%;
     overflow: hidden;
     background-color: #333;
     background: linear-gradient(to bottom,  rgba(51, 51, 51, 1) 12%, rgba(51, 51, 51, 0) 100%);
     position: fixed;
     z-index: 1000;
     top: 0;
-    width: 99.3%;
     height: 10%;
+    width: 99.23%;
+    /*  */
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+
   }
   
 .navigation li {
@@ -170,19 +173,20 @@ footer {
   }
   
 .navigation li a:hover:not(.active) {
-    background-color: #111;
+    background-color: #222;
+    border-radius: 20%;
   }
   
-  /**************/
-  /* Skills Bar */ 
-  /**************/
+
+/******************/
+/* Skills gallery */
+/******************/
 
 :root {
   --marquee-width: 100%; /* For skill bar */
   --marquee-height: 13vh; /* For skill bar */
 }
 
-/* Gallery */
 .gallery{
   position: relative;
   overflow: hidden;
@@ -217,7 +221,7 @@ footer {
   /*width: 100%;
   display: flex;
   */
-  height: 30%;
+  height: 40%;
 }
 
 .gallery__stream .slider {
@@ -292,12 +296,15 @@ footer {
   left: 100%;
 }
 
+/**************/
+/* Social Bar */
+/**************/
 
-/* common styles !!! YOU DON'T NEED THEM */
 .container {
   margin: 10px auto 0px auto;
   text-align: center;
 }
+
 .container h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
@@ -306,9 +313,11 @@ footer {
   color: #333;
   letter-spacing: 3px;
 }
+
 .container h1 span {
   display: inline-block;
 }
+
 .container h1 span:before, .container h1 span:after {
   content: "";
   display: block;
@@ -333,10 +342,11 @@ footer {
   justify-content: center;
 }
 
-/* styles for a common effect !!!YOU NEED THEM */
+/*styles for a common effect*/
 .effect {
   /*display: flex; !!!uncomment this line !!!*/
 }
+
 .effect a {
   text-decoration: none !important;
   width: 60px;
@@ -352,19 +362,23 @@ footer {
   color: #333;
   border: 2px solid #333;
 }
+
 .effect a i {
   position: relative;
   z-index: 3;
 }
+
 .effect a:last-child {
   margin-right: 0px;
 }
+
 .effect a:before {
   content: "";
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
+
 .effect a i {
   display: inline-block;
   vertical-align: middle;
@@ -374,39 +388,75 @@ footer {
 .effect.thurio a {
   transition: border-radius 0.2s linear 0s;
 }
+
 .effect.thurio a i {
   transition: transform 0.01s linear 0s;
   transform: rotate(-45deg);
 }
+
 .effect.thurio a:hover {
   border-radius: 0px;
 }
 
   
   @media (max-width: 793.5px) {
-    :root {
-      --marquee-height: 7.5rem;
-      --marquee-elements-displayed: 3;
-    }
+
     .gallery:before,
     .gallery:after {
-      width: 15rem;
+      width: 12rem;
     }
     .gallery__stream .slider {
       font-size: calc(var(--marquee-height)*1.8/4); /* 5rem; */
     }
+
+    .presentation-banner {
+        z-index: 10;
+        width: 200px;
+        height: 100px;
+        top: 40%;
+        left: 20%;
+        margin: -190px 0 0 -10px;
+    }
+
+    .presentation-banner h1 {
+      /* font-size: 1.225rem; */
+    }
+    .presentation-banner h3 {
+      /* font-size: 0.5rem; */
+    }
+    .navigation ul{
+      width: 97%;
+    }
+
+    .gallery__stream {
+      height: 60%;
+    }
+
   }
   
   @media (min-width: 793.5px) and (max-width: 1126.97px) {
-    :root {
-      --marquee-elements-displayed: 4;
-    }
+
     .gallery:before,
     .gallery:after {
       width: 25rem;
     }
     .gallery__stream .slider {
-      font-size: calc(var(--marquee-height)*2.4/4); /* 5rem; */
+      /* font-size: calc(var(--marquee-height)*2.4/4); 5rem; */
     }
+
+    .presentation-banner h1 {
+      /* font-size: 1.875rem; */
+    }
+    .presentation-banner h3 {
+      /* font-size: 0.75rem; */
+    }
+
+    .navigation ul {
+      width: 98.5%;
+    }
+    .gallery__stream {
+      height: 50%;
+    }
+
   } 
 

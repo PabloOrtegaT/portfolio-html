@@ -11,15 +11,18 @@
 </head>
 
 <body>
-  <div class="navigation">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-
   <main class="wrapper">
+    <div class="navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#social">Social</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <section class="home" id="home">
     <div id="particles-js">
       <div class="presentation-banner">
           <h1>Pablo Ortega</h1>
@@ -31,6 +34,7 @@
           </h3>
       </div>
     </div>
+  </section>
 
     <div class="gallery">
       <div class="gallery__prev"></div>
@@ -51,7 +55,7 @@
         <li>
           <figure>
             <img src="images/compustore.jpg"
-              alt="Several hands holding beer glasses">
+              alt="CompuStore">
             <figcaption>
               <h3>CompuStore</h3>
             </figcaption>
@@ -66,7 +70,7 @@
           <figure>
             <img
               src="images/psoc1.jpg"
-              alt="Several friends doing a toast">
+              alt="Morse Code with microcontrollers">
             <figcaption>
               <h3>Morse Code</h3>
             </figcaption>
@@ -79,30 +83,31 @@
         <li>
           <figure>
             <img
-              src="https://images.unsplash.com/photo-1471421298428-1513ab720a8e"
-              alt="Three different glasses of beer">
+              src="images/robofriends.PNG"
+              alt="RoboFriends">
             <figcaption>
-              <h3>To be included</h3>
+              <h3>RoboFriends</h3>
             </figcaption>
           </figure>
           <p>
-            My third project
+            A simple react website that uses API's to fill up information, it has a search feature for the filled info.
           </p>
           <a href="#">Read more</a>
         </li>
       </ul>
     </section>
-
-    <div class="container">
-      <div class="effect thurio">
-        <div class="buttons">
-          <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
-          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    
+    <section class="social" id="social">
+      <div class="container">
+        <div class="effect thurio">
+          <div class="buttons">
+            <a href="https://www.facebook.com/PabloEOrtegaT/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com/PabloOrtegaT" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/pablo-ortega-161155158/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
   </main>
   <footer>
