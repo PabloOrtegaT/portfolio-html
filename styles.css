@@ -177,6 +177,16 @@ p, a {
   color: rgb(5, 156, 0);
 }
 
+.projects .techs #mysql{
+  color: rgb(0, 0, 0);
+  font-size: 60px;
+}
+
+.projects .techs #c{
+  color: rgb(58, 76, 238);
+  font-size: 65px;
+}
+
 /**********/
 /* footer */
 /**********/
