@@ -148,6 +148,35 @@ p, a {
   color: #333;
 }
 
+.projects .techs #android{
+  color: rgb(0, 184, 129);
+}
+
+.projects .techs #javascript{
+  color: rgb(240, 255, 36);
+  background-color: black;
+}
+
+.projects .techs #css{
+  color: rgb(48, 51, 221);
+}
+
+.projects .techs #html{
+  color: rgb(209, 71, 47);
+}
+
+.projects .techs #react{
+  color: rgb(0, 174, 255);
+}
+
+.projects .techs #java{
+  color: rgb(0, 118, 173);
+}
+
+.projects .techs #xml{
+  color: rgb(5, 156, 0);
+}
+
 /**********/
 /* footer */
 /**********/
