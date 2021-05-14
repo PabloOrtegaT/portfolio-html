@@ -130,21 +130,17 @@ p, a {
 
 .projects .techs {
   display: flex;
-  align-items:baseline;
   flex-direction: row;
-  padding: 2rem 2rem;
-  padding-right: 2rem;
-  flex-shrink: 0;
+  padding: 1rem 2.5rem;
+  position: relative;
+  justify-content: center;
+  align-items: center;
   color: #333;
-
 }
 
 .projects .techs .technologies {
   width: 60px;
   height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-right: 20px;
   font-size: 18px;
   overflow: hidden;
@@ -475,7 +471,7 @@ footer {
       font-size: 0.9rem;
     }
 
-    .projects .technologies {
+    .projects .techs .technologies {
       font-size: 14px;
     }
 
