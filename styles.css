@@ -128,6 +128,31 @@ p, a {
   margin: .5rem;
 }
 
+.projects .techs {
+  display: flex;
+  align-items:baseline;
+  flex-direction: row;
+  padding: 2rem 2rem;
+  padding-right: 2rem;
+  flex-shrink: 0;
+  color: #333;
+
+}
+
+.projects .technologies {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  font-size: 18px;
+  overflow: hidden;
+  position: relative;
+  color: #333;
+}
+
 /**********/
 /* footer */
 /**********/
@@ -446,6 +471,13 @@ footer {
     }
     .navigation ul{
       width: 97%;
+    }
+    .navigation li a {
+      font-size: 0.9rem;
+    }
+
+    .projects .technologies {
+      font-size: 14px;
     }
 
     .gallery__stream {
